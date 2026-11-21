@@ -1,0 +1,421 @@
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="theme-color" content="#2d1026">
+        <meta name="description" content="Una historia de amor, 25 años y el comienzo de una nueva aventura.">
+        <title>Para ti, mi amor bonito ♡</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <script>
+            const fechaCumpleanos =
+                    new Date("2026-11-21T00:00:00-05:00");
+
+            document.documentElement.classList.add(
+                    "bienvenida-pendiente"
+                    );
+
+            if (Date.now() < fechaCumpleanos.getTime()) {
+                document.documentElement.classList.add(
+                        "esperando-cumpleanos"
+                        );
+            }
+        </script>
+    </head>
+
+    <body>
+
+
+        <!-- PANTALLA INICIAL DE MÚSICA -->
+        <div id="bienvenida-musica" class="bienvenida-musica">
+            <div class="bienvenida-contenido">
+                <div class="bienvenida-icono">♫ ♡ ♫</div>
+
+                <span class="bienvenida-etiqueta">
+                    ANTES DE COMENZAR...
+                </span>
+
+                <h2>
+                    Una sorpresa especial
+                    <em>merece una bonita melodía.</em>
+                </h2>
+
+                <p>
+                    Mi amor bonito, he preparado este pequeño rincón
+                    especialmente para ti.
+                    <br><br>
+                    ¿Quieres activar la música de fondo
+                    para acompañar nuestra historia?
+                </p>
+
+                <div class="bienvenida-botones">
+                    <button id="activar-musica-inicio"
+                            class="btn-musica-si">
+                        ♫ Sí, activar música
+                    </button>
+
+                    <button id="omitir-musica-inicio"
+                            class="btn-musica-no">
+                        Continuar sin música
+                    </button>
+                </div>
+
+                <span class="bienvenida-nota">
+                    Hecho con todo mi amor ♡
+                </span>
+            </div>
+        </div>
+
+        <div id="pantalla-espera" class="pantalla-espera" hidden>
+            <div class="espera-decoracion" aria-hidden="true">
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+                <span>✧</span>
+                <span>♡</span>
+            </div>
+
+            <div class="espera-contenido">
+                <div class="espera-corazon">♥</div>
+
+                <span class="espera-etiqueta">
+                    ALGO MUY ESPECIAL ESTÁ POR LLEGAR
+                </span>
+
+                <h1>
+                    Tengo una sorpresa
+                    <em>para ti, mi amor bonito.</em>
+                </h1>
+
+                <p class="espera-mensaje">
+                    He preparado un pequeño rincón lleno de
+                    nuestros recuerdos, nuestra historia y
+                    todo el amor que siento por ti.
+                    <br><br>
+                    Pero todavía falta un poquito para
+                    que puedas descubrirlo. ♡
+                </p>
+
+                <div class="espera-separador">✦ ♡ ✦</div>
+
+                <p class="espera-subtitulo">
+                    NUESTRA SORPRESA SE DESBLOQUEA EN
+                </p>
+
+                <div class="cuenta-regresiva">
+                    <div class="tiempo">
+                        <strong id="dias">00</strong>
+                        <span>DÍAS</span>
+                    </div>
+
+                    <div class="tiempo">
+                        <strong id="horas">00</strong>
+                        <span>HORAS</span>
+                    </div>
+
+                    <div class="tiempo">
+                        <strong id="minutos">00</strong>
+                        <span>MINUTOS</span>
+                    </div>
+
+                    <div class="tiempo">
+                        <strong id="segundos">00</strong>
+                        <span>SEGUNDOS</span>
+                    </div>
+                </div>
+
+                <p class="espera-fecha">
+                    21 DE NOVIEMBRE DE 2026 · 00:00
+                </p>
+
+                <p class="espera-despedida">
+                    Te prometo que la espera valdrá la pena.
+                    <br>
+                    Con todo mi amor, tu esposo. ♡
+                </p>
+            </div>
+        </div>
+
+        <!-- PÁGINA ORIGINAL -->
+        <div id="progress"></div>
+        <div id="hearts" aria-hidden="true"></div>
+
+        <nav class="nav">
+            <a href="#inicio" class="brand">♡ Nuestra historia</a>
+            <button class="sound" id="sound" aria-label="Activar música">
+                ♫ Música: desactivada
+            </button>
+        </nav>
+
+        <header class="hero" id="inicio">
+            <div class="hero-photo"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="eyebrow">UNA HISTORIA ESCRITA CON AMOR</span>
+                <div class="tinyheart">♥</div>
+
+                <h1>Felices <em>25</em> años,<br>mi amor bonito</h1>
+
+                <p>
+                    Si pudiera volver a vivir cada instante,
+                    te volvería a elegir a ti.
+                </p>
+
+                <button class="primary" id="begin">
+                    Descubre nuestra historia <span>↓</span>
+                </button>
+            </div>
+
+            <div class="scroll-note">
+                Desliza para recordar juntos ↓
+            </div>
+        </header>
+
+        <main>
+            <section class="intro reveal" id="historia">
+                <span class="kicker">Para la mujer de mi vida</span>
+                <h2>Hay historias que comienzan con una mirada…</h2>
+                <p>
+                    …y terminan convirtiéndose en un hogar,
+                    en sueños compartidos y en una nueva vida.
+                    Esta es nuestra historia, contada en pequeños
+                    momentos que para mí significan el mundo.
+                </p>
+                <div class="line-heart">✦ ♥ ✦</div>
+            </section>
+
+            <section class="chapter chapter-first" id="primera-cita">
+                <div class="chapter-text reveal">
+                    <span class="number">CAPÍTULO 01</span>
+                    <h2>El día que <em>todo comenzó</em></h2>
+
+                    <p>
+                        Recuerdo cuando iba llegando a encontrarte
+                        para nuestra primera cita. Tomé una fotografía
+                        sin saber que estaba guardando uno de los
+                        primeros recuerdos de la historia más bonita
+                        de mi vida.
+                    </p>
+
+                    <p>
+                        En aquel momento todavía no imaginaba que
+                        un día te llamaría mi esposa, ni que juntos
+                        construiríamos una familia. Hoy miro atrás
+                        y solo puedo agradecer por haberte encontrado.
+                    </p>
+
+                    <blockquote>
+                        «Si pudiera regresar a ese día,
+                        volvería a caminar hacia ti.»
+                    </blockquote>
+                </div>
+
+                <div class="polaroid reveal">
+                    <img src="assets/foto-01.jpg"
+                         alt="Un recuerdo de nuestra primera cita"
+                         loading="lazy">
+                    <span>Aquí empezó todo ♡</span>
+                </div>
+            </section>
+
+            <section class="section-dark" id="aventuras">
+                <div class="center reveal">
+                    <span class="number">CAPÍTULO 02</span>
+                    <h2>El mundo es más bonito <em>contigo</em></h2>
+                    <p>
+                        Entre viajes, risas, caminatas y aventuras,
+                        descubrí que mi lugar favorito no es un destino:
+                        es estar a tu lado.
+                    </p>
+                </div>
+
+                <div class="featured-grid" id="travel-grid"></div>
+
+                <p class="center mini">
+                    Y todavía nos quedan tantos lugares por descubrir… ✨
+                </p>
+            </section>
+
+            <section class="chapter admire" id="admiracion">
+                <div class="portrait reveal">
+                    <img src="assets/foto-36.jpg"
+                         alt="Un logro académico inolvidable"
+                         loading="lazy">
+                </div>
+
+                <div class="chapter-text reveal">
+                    <span class="number">CAPÍTULO 03</span>
+                    <h2>La mujer que <em>admiro</em></h2>
+
+                    <p>
+                        Me enamora tu sonrisa, pero también tu fortaleza,
+                        tu manera de seguir adelante y todo lo que
+                        has conseguido con esfuerzo.
+                    </p>
+
+                    <p>
+                        He tenido el privilegio de acompañarte en
+                        momentos importantes, y quiero seguir
+                        celebrando cada uno de tus sueños,
+                        grandes y pequeños.
+                    </p>
+
+                    <blockquote>
+                        «Qué orgullo compartir la vida contigo.»
+                    </blockquote>
+                </div>
+            </section>
+
+            <section class="chapter-baby" id="familia">
+                <div class="center reveal">
+                    <span class="number">CAPÍTULO 04</span>
+                    <h2>Y nuestro amor <em>se hizo vida</em></h2>
+
+                    <p>
+                        Cuando creíamos que ya conocíamos la felicidad,
+                        llegó una nueva razón para sonreír.
+                        Verte vivir esta etapa me hizo amarte
+                        todavía más.
+                    </p>
+                </div>
+
+                <div class="baby-grid" id="baby-grid"></div>
+
+                <div class="baby-note reveal">
+                    <span>♡</span>
+                    <p>
+                        De dos corazones nació una familia.<br>
+                        Y esta aventura apenas comienza.
+                    </p>
+                </div>
+            </section>
+
+            <section class="memories" id="recuerdos">
+                <div class="center reveal">
+                    <span class="number">NUESTRO ÁLBUM</span>
+                    <h2>43 momentos, <em>infinitas razones</em></h2>
+
+                    <p>
+                        Cada fotografía guarda un pedacito de nosotros.
+                        Toca cualquiera para verla más grande.
+                    </p>
+                </div>
+
+                <div class="filterbar" role="group"
+                     aria-label="Filtrar fotografías">
+                    <button class="filter active" data-filter="all">Todas</button>
+                    <button class="filter" data-filter="together">Juntos</button>
+                    <button class="filter" data-filter="her">Tú</button>
+                    <button class="filter" data-filter="adventures">Aventuras</button>
+                    <button class="filter" data-filter="family">Nuestra familia</button>
+                </div>
+
+                <div class="gallery" id="gallery"></div>
+            </section>
+
+            <section class="letter-section" id="carta">
+                <div class="letter reveal">
+                    <div class="seal">♥</div>
+                    <span class="kicker">UNA CARTA PARA TI</span>
+                    <h2>Mi amor…</h2>
+
+                    <p>
+                        Hoy cumples 25 años y quiero que sepas lo
+                        inmensamente feliz que me hace compartir
+                        la vida contigo.
+                    </p>
+
+                    <p>
+                        Gracias por cada sonrisa, cada abrazo,
+                        cada aventura y cada día en el que elegimos
+                        seguir caminando juntos. Gracias por ser tú,
+                        por llenar nuestros días de amor y por darme
+                        la alegría de construir una familia a tu lado.
+                    </p>
+
+                    <p>
+                        Me emociona pensar en todo lo que todavía
+                        nos espera: nuevos recuerdos, sueños por cumplir,
+                        momentos sencillos y una vida entera para
+                        seguir eligiéndonos.
+                    </p>
+
+                    <p>
+                        Deseo que este nuevo año de vida te regale
+                        tanta felicidad como la que tú traes a la mía.
+                        Siempre voy a estar orgulloso de ti y agradecido
+                        de tenerte a mi lado.
+                    </p>
+
+                    <p class="signature">
+                        Feliz cumpleaños, mi vida.<br>
+                        <strong>Te amo, hoy y siempre. ♡</strong>
+                    </p>
+
+                    <button class="primary" id="surprise">
+                        Tengo una última sorpresa ✨
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Hecho con todo mi amor ♡
+            <span>Para tus 25 años</span>
+        </footer>
+
+        <!-- VISOR DE FOTOGRAFÍAS -->
+        <div class="modal" id="lightbox"
+             role="dialog" aria-modal="true"
+             aria-label="Fotografía ampliada" hidden>
+
+            <button class="close" id="close-lightbox"
+                    aria-label="Cerrar">×</button>
+
+            <button class="arrow prev" id="prev"
+                    aria-label="Anterior">‹</button>
+
+            <figure>
+                <img id="lightbox-img" alt="Recuerdo ampliado">
+                <figcaption id="lightbox-caption"></figcaption>
+            </figure>
+
+            <button class="arrow next" id="next"
+                    aria-label="Siguiente">›</button>
+        </div>
+
+        <!-- SORPRESA FINAL -->
+        <div class="modal surprise-modal" id="surprise-modal"
+             role="dialog" aria-modal="true"
+             aria-label="Sorpresa de cumpleaños" hidden>
+
+            <div class="surprise-card">
+                <button class="close" id="close-surprise"
+                        aria-label="Cerrar">×</button>
+
+                <span class="sparkle">✨ ♡ ✨</span>
+
+                <h2>
+                    En todas mis vidas,<br>
+                    <em>te elegiría a ti.</em>
+                </h2>
+
+                <p>
+                    Feliz cumpleaños número 25, mi amor.<br>
+                    Lo mejor de nuestra historia aún está por venir.
+                </p>
+
+                <strong>Te amo infinitamente ♡</strong>
+
+                <button class="primary" id="replay">
+                    Volver al comienzo ↺
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
